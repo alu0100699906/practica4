@@ -1,5 +1,44 @@
 #!/usr/bin/ruby      
 
+
+########################## INSERTAR #######################################
+#Insertar elementos de la matriz A
+def insertarA
+  a=[[0,0,0],[0,0,0],[0,0,0]]
+  i,j=0,0
+  while i<3
+     while j<3
+        puts "Elemento #{i+1} fila y #{j+1} columna"
+        line=gets.to_i
+        a[i][j]=line
+        j+=1
+     end
+     j=0
+     i+=1
+   end
+return a
+end
+
+#Insertar elementos de la matriz B
+def insertarB
+  b=[[0,0,0],[0,0,0],[0,0,0]]
+  i,j=0,0
+  while i<3
+     while j<3
+        puts "Elemento #{i+1} fila y #{j+1} columna"
+        line=gets.to_i
+        b[i][j]=line
+        j+=1
+     end
+     j=0
+     i+=1
+   end
+return b
+end
+
+######################## END INSERTAR ###############################
+
+
 ######################## MOSTRAR ####################################
 #Subrutina para mostrar matrices
 def mostrarMatriz(a,b)
@@ -40,8 +79,11 @@ end
 ##################### MAIN ######################################
 puts "--- Calcular suma matricial A+B ---"
 
-a=[[1,1,1],[1,1,1],[1,1,1]]
-b=[[1,1,1],[1,1,1],[1,1,1]]
+puts "Inserta la matriz A elemento a elemento"
+a=insertarA
+puts "Inserta la matriz B elemento a elemento"
+b=insertarB
+
 v= sumar(a,b)
 mostrarMatriz(v, "Resultado")
 
