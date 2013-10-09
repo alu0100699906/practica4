@@ -156,4 +156,9 @@ mostrarMatriz(v, "Resultado")
 
 #################### END MAIN ##################################
 
-
+#Nos hemos encontrado con el error siguiente: no poder subir una fusion de la rama master si ya se nos ha adelentado el compañero 
+#para poder subirlo hemos tenido que hacer un pull, al hacerlo se hace un merge automatico, con que se generan los siguientes conflictos:
+#simplemente eliminando la primera fila y la ultima del fichero
+#que contenian "<<<<<<HEAD" y "<<<<<<numerodeserie" y una línea que dividía el contenido de los dos ficheros.
+#una vez editado el fichero lo hemos vuelto a añadir a nuestro repositorio como de costumbre:
+#git add matrices.rb && git commit -m "Final" && git push origin master
